@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+	<head>
+		<title>JSON Practice</title>
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+
+	<body onload="">
+  <h1 class="text-center text-danger"><b>Employee Details</b></h1>
+
+		<table id="table" class="table border">
+			<tr class="border bg-primary text-white text-center">
+				<th>ID</th>
+				<th>Name</th>
+				<th>Type</th>
+				<th>DOB</th>
+				<th>Experience</th>
+				<th>DOJ</th>
+			</tr>
+
+      <tr id="0" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+      <tr id="1" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+      <tr id="2" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+      <tr id="3" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+      <tr id="4" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+      <tr id="5" class="border border-primary text-info text-center" onclick="getEmployees(this)"></tr>
+		</table>
+    <b>
+      <div id="sampleDiv" class="text-center text-success"></div>
+    </b>
+    <div id="divId" class="text-center">
+    </div>
+		<script type="text/javascript" src="employees.js"></script>
+	</body>
+
+</html>
