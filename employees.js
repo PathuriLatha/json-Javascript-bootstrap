@@ -2,7 +2,9 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    for(var j=0; j<=5; j++){
+    var jsonArrayLength = Object.keys(myObj.Employees).length;
+    //alert(jsonArrayLength);
+    for(var j=0; j<jsonArrayLength; j++){
       var tableRow = "<td class='border border-primary'>"+myObj.Employees[j].empId+"</td>";
           tableRow += "<td class='border border-primary'>"+myObj.Employees[j].empName+"</td>";
           tableRow += "<td class='border border-primary'>"+myObj.Employees[j].jobType+"</td>";
@@ -52,6 +54,6 @@ function getEmployees(element){
           };
         } */
     document.getElementById("sampleDiv").innerText = value;
-    document.getElementById("divId").innerHTML = getdisplay;
+    //document.getElementById("divId").innerHTML = getdisplay;
 }
 
