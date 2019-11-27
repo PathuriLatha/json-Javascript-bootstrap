@@ -21,71 +21,27 @@ xmlhttp.send();
 
 function getEmployees(element){
   var value = document.getElementById(element.id).innerText;
-  /*console.log(value);
-  console.log(typeof value);
-  var arr = value.split(' ');
-  console.log(arr);
-  console.log(typeof arr);*/
- /* var rowValue = String(value);
-  //alert(typeof rowValue);
-  rowValue = rowValue.split(" ");
-  alert(rowValue);
-    var getdisplay = "<table align='center'>";
-        getdisplay += "<tr><td>Id : </td><td id='id'>"+rowValue[0]+"</td></tr>";
-        getdisplay += "<tr><td>Name : </td><td id='name'>"+rowValue[1]+"</tr>";
-        getdisplay += "<tr><td>Type : </td><td id='type'>"+rowValue[2]+"</td></tr>";
-        getdisplay += "<tr><td>DOB : </td><td id='dob'>"+rowValue[3]+"</td></tr>";
-        getdisplay += "<tr><td>Experience : </td><td id='exp'>"+rowValue[4]+"</td></tr>";
-        getdisplay += "<tr><td>DOJ : </td><td id='doj'>"+rowValue[5]+"</td></tr>";
-        getdisplay += "</table>";
-    */
-     var getdisplay = "<table align='center'>";
-              getdisplay += "<tr><td>Id : </td><td id=''id''></td></tr>";
-              getdisplay += "<tr><td>Name : </td><td id='name'></td></tr>";
-              getdisplay += "<tr><td>Type : </td><td id='type'></td></tr>";
-              getdisplay += "<tr><td>DOB : </td><td id='dob'></td></tr>";
-              getdisplay += "<tr><td>Experience : </td><td id='exp'></td></tr>";
-              getdisplay += "<tr><td>DOJ : </td><td id='doj'></td></tr>";
-              getdisplay += "</table>";
-      /*
-      var getdisplay = "<table align='center'>";
-          getdisplay += "<tr><td>Id : </td><td id='cellId0'></td></tr>";
-          getdisplay += "<tr><td>Name : </td><td id='cellId1'></td></tr>";
-          getdisplay += "<tr><td>Type : </td><td id='cellId2'></td></tr>";
-          getdisplay += "<tr><td>DOB : </td><td id='cellId3'></td></tr>";
-          getdisplay += "<tr><td>Experience : </td><td id='cellId4'></td></tr>";
-          getdisplay += "<tr><td>DOJ : </td><td id='cellId5'></td></tr>";
-          getdisplay += "</table>";
-      */
-       /*var table = document.getElementById("table"), rIndex;
-        //for(var k=1; k<table.rows.length; k++){
-          table.rows[element.id].onclick = function(){
-            // console.log(rIndex);
-            //alert(rIndex);
-            document.getElementById('id').value = this.cell[0].innerHTML;
-            document.getElementById('name').value = this.cell[1].innerHTML;
-            document.getElementById('type').value = this.cell[2].innerHTML;
-            document.getElementById('dob').value = this.cell[3].innerHTML;
-            document.getElementById('exp').value = this.cell[4].innerHTML;
-            document.getElementById('doj').value = this.cell[5].innerHTML;
-          };*/
+  var tableData = document.getElementById("table");
+  for(var m = 0; m < tableData.rows.length; m++){
+    tableData.rows[m].onclick = function(){
+      var id = this.cells[0].innerHTML;
+      var name = this.cells[1].innerHTML;
+      var type = this.cells[2].innerHTML;
+      var dob = this.cells[3].innerHTML;
+      var exp = this.cells[4].innerHTML;
+      var doj = this.cells[5].innerHTML;
 
-         /* for(var l=0; l<table.rows[element.id].cells.length; l++){
-            var getCellData = document.getElementById('table').rows[element.id].cells.item(l).innerText;
-           //alert(getCellData);
-           document.getElementById('cellId'+l).innerHTML = getCellData
-          }*/
-         /* var table = document.getElementById("table");
-          var cells = table.rows[element.id.rowIndex].getElementsByTagName("td");
-              console.log(cells);
-              alert(typeof cells);
-              for (var i = 0; i < cells.length; i++) {
-                var data = table.rows[element.id].cells[i].innerHTML;
-                //alert(data);
-              //  document.getElementById('cellId'+i).value = data;
-              }
-        //}*/
-    document.getElementById("sampleDiv").innerText = value;
-    document.getElementById("divId").innerHTML = getdisplay;
+      var getDisplay = "<table class='text-success' align='center'>";
+          getDisplay += "<tr><td>Id : </td><td id='id'>"+id+"</td></tr>";
+          getDisplay += "<tr><td>Name : </td><td id='name'>"+name+"</td></tr>";
+          getDisplay += "<tr><td>Type : </td><td id='type'>"+type+"</td></tr>";
+          getDisplay += "<tr><td>DOB : </td><td id='dob'>"+dob+"</td></tr>";
+          getDisplay += "<tr><td>Experience : </td><td id='exp'>"+exp+"</td></tr>";
+          getDisplay += "<tr><td>DOJ : </td><td id='doj'>"+doj+"</td></tr>";
+          getDisplay += "</table>";
+      //document.getElementById("sampleDiv").innerHTML = value;
+      document.getElementById("divId").innerHTML = getDisplay;
+    };
+  }
 }
 
