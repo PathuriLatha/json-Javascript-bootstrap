@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal with Media Object</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center text-primary">Modal with Media Query Object</h1>
+    <center><button class="btn btn-info" data-toggle="modal" data-target="#myModalMediaObject">Click me</button></center>
+
+    <div class="modal fade" id="myModalMediaObject">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="media border border-primary p-3">
+              <img class="mr-3 mt-3 img-thumbnail rounded-circle" src=".\images\personIcon3.jpg" style="width:90px;"></img>
+              <div class="media-body">
+                <h4>Main Heading <small><i>using Media-Object</i></small></h4>
+                <p>The media object helps build complex and repetitive components where some media is positioned alongside content
+                  that doesn’t wrap around said media. Plus, it does this with only two required classes thanks to flexbox.</p>
+                <div class="media p-3">
+                  <img class="mr-3 mt-3 img-thumbnail rounded-circle" src=".\images\personIcon4.jpg" style="width:55px;">
+                  <div class="media-body">
+                    <h4>Sub Heading <small><i>using Media-Object</i></small></h4>
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-success" data-dismiss="modal">submit</button>
+              <button class="btn btn-danger" data-dismiss="modal">cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap collapse grid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+			.container{
+				/* display : inline-flex;*/
+				/* flex-direction : row | row-reverse |  column ;*/
+				flex-wrap: nowrap | wrap | wrap-reverse;
+			}
+		</style>
+</head>
+<body>
+  <h3 class="text-center text-success"><b>Bootstrap4 Collapse</b></h3>
+  <div class="container">
+    <div class="row text-danger alert-info">
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center" id="collapseOffice">
+        <figure class="figure">
+          <img class="img-thumbnail" src=".\images\office.jpg" alt="Office"></img>
+          <figcaption class="figure-caption text-success text-right">Office image</figcaption>
+        </figure>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center" id="collapseWater">
+        <img class="img-thumbnail" src=".\images\water.jpg" alt="Water"></img>
+        <figcaption class="figure-caption text-right">Water image</figcaption>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center" id="collapseLaptap">
+        <img class="img-thumbnail" src=".\images\laptap.jpg" alt="Laptap"></img>
+        <figcaption class="figure-caption text-right">Laptap image</figcaption>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center" id="collapseImage">
+        <img class="img-thumbnail" src=".\images\images.jpg" alt="Images"></img>
+        <figcaption class="figure-caption text-right">Image</figcaption>
+      </div>
+    </div>
+    <div class="row text-danger alert-info">
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center">
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseOffice" role="button" aria-expanded="false" aria-controls="collapseOffice">Toggle Office image</a>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center">
+        <a class="btn btn-warning btn-lg" data-toggle="collapse" href="#collapseWater" role="button" aria-expanded="false" aria-controls="collapseWater">Toggle Water image</a>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center">
+        <a class="btn btn-danger btn-lg" data-toggle="collapse" href="#collapseLaptap" role="button" aria-expanded="false" aria-controls="collapseLaptap">Toggle laptap image</a>
+      </div>
+      <div class="col col-lg-3 col-sm-4 border border-danger text-center">
+        <a class="btn btn-success btn-lg" data-toggle="collapse" href="#collapseImage" role="button" aria-expanded="false" aria-controls="collapseImage">Toggle image</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

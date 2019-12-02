@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center text-danger">Boostrap Custom Forms</h1>
+    <h3 class="text-success">Custom CheckBoxes Vs Default Checkboxes</h3>
+    <form>
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customCheck">
+        <label class="custom-control-label" for="customCheck">Custom checkbox</label>
+      </div>
+      <input type="checkbox" id="defaultCheck">
+      <label for="defaultCheck">Default checkbox</label>
+    </form>
+    <h3 class="text-warning">Toggle Switch</h3>
+    <form>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch">
+        <label class="custom-control-label" for="customSwitch">Custom switch(Toggle me)</label>
+      </div>
+      <input type="checkbox" id="defaultSwitch">
+      <label for="defaultSwitch">defaults</label>
+    </form>
+    <h3 class="text-danger">Custom radio Vs default radio</h3>
+    <form>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customRadio" value="customEx">
+        <label class="custom-control-label" for="customRadio">Custom radio</label>
+      </div>
+      <input type="radio" id="defaultRadio">
+      <label for="defaultRadio">Default radio</label>
+    </form>
+    <h3 class="text-primary">Inline Custom Form Controls</h3>
+    <form>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="female">
+        <label class="custom-control-label" for="female">female</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="male">
+        <label class="custom-control-label" for="male">male</label>
+      </div>
+    </form>
+    <h3 class="text-success">Custom Select Menu Vs Default select Menu</h3>
+    <form>
+      <select name="cars" class="custom-select mb-3">
+        <option selected>Custom Select Menu</option>
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="ford">Ford</option>
+      </select>
+      <select name="colors">
+        <option selected>Default select Menu</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+      </select>
+    </form>
+    <h1 class="text-info">Custom Range Vs Default Range</h1>
+    <form action="/action_page.php">
+      <div>
+        <label for="customRange">Custom range</label>
+        <input type="range" class="custom-range" id="customRange">
+      </div>
+      <label for="defaultRange">Default range</label>
+      <input type="range" id="defaultRange">
+    </form>
+  </div>
+</body>
+</html>
