@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function(){
+        $.getJSON("data.json", function(data){
+          var table = $("<table></table>");
+          var th = $("<th></th>");
+          $.each(data, function(key, value){
+            th.text(key);
+            console.log(key);
+            /*table += "<tr>";
+            table += "<td>"+value.empId+"</td>";
+            table += "<td>"+value.empName+"</td>";
+            table += "<td>"+value.jobType+"</td>";
+            table += "<td>"+value.dateOfBirth+"</td>";
+            table += "<td>"+value.jobExperience+"</td>";
+            table += "<td>"+value.dateOFJoining+"</td>";
+            table += "</tr>";*/
+            var tr = $("<tr></tr>");
+            tr.text(value.empId);
+            $(table).append(th);
+            $(table).append(tr);
+          });
+         // $(table).append(th);
+          $("#divId").append(table);
+        });
+      });
+    </script>
+</head>
+<body>
+  <div id="divId"></div>
+</body>
+</html>

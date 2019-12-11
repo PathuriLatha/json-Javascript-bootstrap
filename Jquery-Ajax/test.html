@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>data</title>
+ <!-- <script src="~/Scripts/jquery-1.6.4.min.js"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+        $(function () {
+            $('#b1').click(function () {
+                var a = $('#idd').val();
+                alert(a);
+                $.ajax({
+                    type: 'post',
+                    url: 'data.json',
+                    data: { id: a },
+                    success:function(d)
+                    {
+                        console.log(d);
+                        var a = JSON.parse(d);
+                        alert(d);
+                        $.each(a, function (daa) {
+                            var mydata = daa.id;
+                            alert(mydata);
+                            $('#tab').append('<tr>' + '<td>' +daa.id + '</td>' + '<td>' +a.name + '</td>' + '<td>' +a.adres + '</td>' + '</tr>');
+                        });
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+  Enter the id @Html.TextBox("idd")
+  <input type="button" value="Submit" id="b1"/>
+</div><br/>
+<table id="tab">
+
+</table>
+</body>
+</html>
